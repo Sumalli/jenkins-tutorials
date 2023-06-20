@@ -6,7 +6,9 @@ pipeline {
             steps {
                sh 'java -version'
                 sh 'cat /etc/*_version'
-                sh '/var/lib/jenkins/workspace'
+                sh '''cd /var/lib/jenkins/workspace
+                      ls -ltr'''
+                 
             }
         }
 }
