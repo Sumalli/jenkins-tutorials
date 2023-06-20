@@ -1,27 +1,36 @@
 pipeline {
     agent any
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                bat 'python -V'
+                sh 'JDK-VERSION 11.0'
             }
         }
-    }
- post {
-        always {
-            echo 'Always'
-        }
-        success {
-            echo 'Only on SUCCESS'
-        }
-        failure {
-            echo 'Only on Failure'
-        }
-        unstable {
-            echo 'Only if run is unstable'
-        }
-        changed {
-            echo 'Only if status changed from Success to Failure or vice versa w.r.t. last run.'
-        }
+        post {
+  always {
+    // One or more steps need to be included within each condition's block.
+    echo 'ALWAYS'
+  }
+   success {
+    // One or more steps need to be included within each condition's block.
+     echo 'Only ON SUCCESS'
+  }
+  Failure{
+    // One or more steps need to be included within each condition's block.
+     echo 'Only ON FAILURE'
+  }
+ Unstable {
+    // One or more steps need to be included within each condition's block.
+     echo 'Only IF RUN IS UNSTABLE'
+  }
+  changed {
+    // One or more steps need to be included within each condition's block.
+     echo 'Only IF STATUS CHANGED FROM SUCCESS TO FAILURE OR VICE VERSA WITH RESPECT TO LAST RUN'
+  }
+  
+  
+       }
+
     }
 }
