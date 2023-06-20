@@ -1,6 +1,6 @@
 //DECLARATIVE SCRIPT SYNTAX FORMAT//
 
-pipeline {
+//pipeline {
     agent any
     stages {
         stage('pre -build') {
@@ -53,7 +53,7 @@ pipeline {
             echo 'Cleanup after everything!'
         }
     }
-}
+} //
 
 //SCRIPTED SYNTAX FORMAT//
 
