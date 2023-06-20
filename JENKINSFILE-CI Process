@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    stages {
+        stage('compile') {
+            steps {
+                sh 'echo Code Compilation is in progress'
+            }
+        }
+        stage('review') {
+            steps {
+                sh 'echo Code Review is in progress.'
+            }
+        }
+        stage('Unit tests') {
+            steps {
+                sh 'echo Running unit tests'
+            }
+        }
+        stage('coverage') {
+            steps {
+                sh 'echo checks how much code is covered in unit testing'
+            }
+        }
+        stage('package') {
+            steps {
+                sh 'echo generates artifact'
+            }
+        }
+    }
+ post {
+        always {
+            echo 'Cleanup after everything!'
+        }
+    }
+}
