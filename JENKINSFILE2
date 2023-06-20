@@ -6,7 +6,7 @@ pipeline {
             steps {
                sh 'java -version'
                 sh 'cat /etc/*_version'
-                sh 'maven --version'
+                sh '/var/lib/jenkins/workspace'
             }
         }
 }
