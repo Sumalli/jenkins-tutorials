@@ -18,11 +18,11 @@ post {
     // One or more steps need to be included within each condition's block.
      echo 'Only ON SUCCESS'
   }
-  Failure{
+  failure{
     // One or more steps need to be included within each condition's block.
      echo 'Only ON FAILURE'
   }
- Unstable {
+ unstable {
     // One or more steps need to be included within each condition's block.
      echo 'Only IF RUN IS UNSTABLE'
   }
