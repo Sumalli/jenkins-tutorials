@@ -31,8 +31,6 @@ post {
      echo 'Only IF STATUS CHANGED FROM SUCCESS TO FAILURE OR VICE VERSA WITH RESPECT TO LAST RUN'
   }
   
-  
-       }
-
-    }
 }
+
+    
