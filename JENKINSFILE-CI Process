@@ -23,7 +23,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                sh 'echo generates  auto-artifact'
+                sh 'echo generated executable file artifact'
             }
         }
     }
